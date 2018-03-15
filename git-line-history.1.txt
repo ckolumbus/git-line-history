@@ -6,7 +6,7 @@ git-line-history - Track changes in a line from a file using git
 
 == SYNOPSIS ==
 
-git-line-history file regexp
+git-line-history file regexp [maxrefs]
 
 == DESCRIPTION ==
 
@@ -21,6 +21,12 @@ order to create tags.
 The 2 mandatory arguments are the file on which the research should be
 performed, and the regexp to be used to track the line change.
 
+`regexp` must have *exactly one* group in it's definition. 
+Whereas the whole regexp will be used to identify the line, only
+the content of this group will be output on the console.
+
+The 3rd optional argument gives the maximum number of refs to be 
+traced.
 
 == USAGE ==
 
